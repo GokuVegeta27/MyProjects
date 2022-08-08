@@ -1,0 +1,38 @@
+.details{
+    width: 800px;
+    height: 60px;
+    
+
+}
+.details h1{
+ position: relative;
+ float: left;
+ width: 80px;
+}
+.details p{
+    float: right;
+}
+.top-header{
+    height: 20px;
+    width: 800px;
+}
+.top-header span{
+margin-right: 80px;
+}
+.view_section{
+    width: 500px;
+}
+
+.card{
+    margin-top: 20px;
+    background-color: beige;
+    border: 2px solid black;
+    height: 50px;
+    
+}
+.card span{
+    margin-right: 60px;
+}
+.card span img{
+    margin-right: 30px;
+}
