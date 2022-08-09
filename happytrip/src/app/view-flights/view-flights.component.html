@@ -12,16 +12,23 @@
         <span>Arrival</span>
         <span>Price</span>
     </div >
-    <div class="details">
+    <div class="details" *ngFor="let fl of flight">
         <div class="card">
             <span><img src="" alt="helo" width="80px" height="20px"></span>
-            <span>15:00</span>
-            <span>5h 30m</span>
-            <span>20:30</span>
-            <span>9,132</span>
+            <span>{{fl.DepTime}}</span>
+            <span>{{fl.TravelTime}}</span>
+            <span>{{fl.ArrTime}}</span>
+            <span>{{fl.Price}}</span>
+
             <span><button routerLink="/bookTicket">BOOK NOW</button></span>
         </div>
-        <div class="card">
+        <div *ngFor="let e for entry">
+            <p>{{e.API}}</p>
+            <p>{{e.Description}}</p>
+            <p>{{e.Auth}}</p>
+
+        </div>
+        <!-- <div class="card">
             <span><img src="" alt="helo" width="80px" height="20px"></span>
             <span>15:00</span>
             <span>5h 30m</span>
@@ -38,6 +45,6 @@
             <span>9,132</span>
             <span><button routerLink="/bookTicket">BOOK NOW</button></span>
 
-        </div>
+        </div> -->
     </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { flights } from 'src/models/flight.model';
+import { FlightService } from 'src/services/flight.service';
 
 @Component({
   selector: 'app-view-flights',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewFlightsComponent implements OnInit {
 
-  constructor() { }
+  flight:flights[]=[];
+  constructor(private api:FlightService) { }
 
   ngOnInit(): void {
+    this.api.getFlights().subscribe(flight=>this.flight=flight)
+
   }
 
 }

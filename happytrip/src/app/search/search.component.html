@@ -1,22 +1,35 @@
-<p>search works!</p>
+<!-- <p>search works!</p> -->
 <div class="search_section">
     <h1>Search Flights</h1>
-    <div>
-        <span><input type="radio" value=" One " name="way">One Way</span>
-        <span><input type="radio" value=" round" name="way">Round Trip</span>
     
+    <form action="" [formGroup]="searchForm" novalidate>
+        <div>
+            <span><input type="radio" value=" One " name="way" formControlName="way">One Way</span>
+            <span><input type="radio" value=" round" name="way" formControlName="way">Round Trip</span>
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="">From</label>
+            <input type="text"  formControlName="from" class="form-control">
+        </div>
+        <!-- <div *ngIf="searchForm.controls['rom'].invalid && (searchForm.controls['From'].dirty || searchForm.controls['From'].touched)" class="alert alert-danger">
+            <div *ngIf="searchForm.controls['From'].errors.required">
+                Name is required
+            </div>
+            
+        </div> -->
     
-    </div>
-    <form action="">
-    <label for="">From</label>
-    <input type="text"  required>
     <svg width="16" height="14" class="c-pointer"><defs><path id="a" d="M0 0h16v16H0z"></path></defs><g transform="translate(0 -1)" fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"></use></mask><g mask="url(#b)" fill="#36C"><path d="M3.556 7L0 11l3.556 4v-3h6.222v-2H3.556V7zM16 5l-3.556-4v3H6.222v2h6.222v3L16 5z"></path></g></g></svg> 
     <label for="">To</label>
     
-    <input type="text" placeholder="To" required>
+    <input type="text" placeholder="To" formControlName="to">
     <div>
-        <label for="">Depart On</label>
-    <input type="text">
+        <label for="">Depart On</label><br>
+    <input type="date">
+    <label for="">Return On</label><br>
+    <input type="date">
+
     
     </div>
     <div class="persons">
@@ -75,7 +88,7 @@
     </div>
     
     <div>
-        <button routerLink="/viewflights">Search Flights</button>
+        <button type="submit" routerLink="/viewflights">Search Flights</button>
     </div>
     </form>
 </div>

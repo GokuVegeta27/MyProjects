@@ -1,5 +1,5 @@
 <p>book-ticket works!</p>
-<h1>Travel detials</h1>
+<h1>Travel Details</h1>
 <div>
     <div>
         <span>Banglore</span>-> <span>Kolkata</span>
@@ -20,12 +20,14 @@
         
 </div>
 
-<form action="">
-    <div>
+<form action="" [formGroup]="travelForm" (ngSubmit)="onSubmit()" novalidate >
+    <div class="form-group">
         <label for="">Traveller Name</label> <br>
-        <span><input type="text" placeholder="First Name"></span>
-        <span><input type="text" placeholder="Last Name"></span>
-        <span><select name="gender" id=""  >
+        <input type="text" placeholder="First Name" formControlName="FName" class="form-control" required>
+        <!-- <span class="text-danger" >FirstName is reqiured</span> -->
+
+        <span><input type="text" placeholder="Last Name" formControlName="LName" class="form-control"></span>
+        <span><select name="gender" id="" formControlName="gender" class="form-control" required>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             
@@ -35,26 +37,26 @@
 
     </div>
    <span>
-    <label for="">Nationality </label> 
+    <label for="" >Nationality </label> 
     <label for="">Date of Birth</label> 
 
     
    </span>
-   <div>
+   <div class="form-group">
     <span>
-        <input type="text" placeholder="Nationality">
-        <input type="date">
+        <input type="text" placeholder="Nationality" class="form-control" formControlName="nation">
+        <input type="date"  class="form-control" formControlName="dob">
     </span>
    </div>
-   <div>
+   <div class="form-group">
     <h2>Contact Details</h2>
-    <label for="">Mobile Number</label><br>
-    <input type="number"><br>
+    <label for="" >Mobile Number</label><br>
+    <input type="number" class="form-control" formControlName="MobileNo"><br>
     <label for="">Email Address</label><br>
-    <input type="email" name="" id="">
+    <input type="email" name="" id="" class="form-control" formControlName="email">
    </div>
    
    <div>
-    <button routerLink="/payment">Continue to payment</button>
+    <button type="submit" routerLink="/payment">Continue to payment</button>
    </div>
 </form>

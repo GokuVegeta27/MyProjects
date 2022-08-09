@@ -1,13 +1,13 @@
-<p>payment-screen works!</p>
+<!-- <p>payment-screen works!</p> -->
 <div>
     <div class="credit_card">
         <form action="">
             <h3>Enter Card Details</h3>
             <label for="">Card Number</label><br>
-            <input type="text " placeholder="Enter card number"> <br>
+            <input type="text " placeholder="Enter card number" required> <br>
             <label for="">Expiry Date</label><br>
            <span>
-            <select name="" id="">
+            <select name="" id="" required>
                 <option value="" hidden>Month</option>
                 <option value="1">Jan</option>
                 <option value="2">Feb</option>
@@ -23,22 +23,22 @@
                 <option value="12">Dec</option>
             </select>
            </span> <span>
-            <select name="" id="">
+            <select name="" id="" required>
                 <option value="" hidden>Year</option>
                 <option value="1990">1990</option>
             </select>
            </span><br>
 
            <label for="">Card Holder Name</label><br>
-           <input type="text" name="" id="" placeholder="Name as on card"> <br>
+           <input type="text" name="" id="" placeholder="Name as on card" required> <br>
            <label for="">CVV</label><br>
-           <input type="number" name="" id="" placeholder="CVV" >
+           <input type="number" name="" id="" placeholder="CVV" required >
         </form>
     </div>
     <div hidden>
         <h3>Enter UPI ID</h3>
         <label for="">UPI ID</label>
-        <input type="text" placeholder="Enter your UPI ID">
+        <input type="text" placeholder="Enter your UPI ID" required>
     </div>
 
 <button routerLink="/confirmation">Pay now</button>

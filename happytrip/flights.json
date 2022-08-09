@@ -1,19 +1,75 @@
 {
-  "posts": [
+  "flights":[
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id":0,
+      "FlightName":"TSC",
+      "FlightNo":76457,
+      "DepTime":"08:00",
+      "ArrTime":"14:30",
+      "TravelTime":"6hrs30min",
+      "Price":"10000",
+      "NoOfSeat":30,
+      "From":"Banglore",
+      "To":"Delhi",
+      "Way":"one"
+     
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id":1,
+      "FlightName":"HFG",
+      "FlightNo":764765,
+      "DepTime":"05:00",
+      "ArrTime":"08:00",
+      "TravelTime":"3hrs",
+      "Price":"6000",
+      "NoOfSeat":28,
+      "From":"Chennai",
+      "To":"Banglore",
+      "Way":"one"
+     
+    },
+    {
+      "id":2,
+      "FlightName":"JFH",
+      "FlightNo":76384,
+      "DepTime":"03:00",
+      "ArrTime":"8:30",
+      "TravelTime":"5hrs30min",
+      "Price":"8000",
+      "NoOfSeat":16,
+      "From":"Chennai",
+      "To":"Delhi",
+      "Way":"one"
+     
+    },
+    {
+      "id":4,
+      "FlightName":"King",
+      "FlightNo":76328,
+      "DepTime":"10:00",
+      "ArrTime":"12:30",
+      "TravelTime":"2hrs30min",
+      "Price":"3000",
+      "NoOfSeat":29,
+      "From":"Chennai",
+      "To":"Coimbatore",
+      "Way":"one"
+     
+    },
+    {
+      "id":5,
+      "FlightName":"TSC",
+      "FlightNo":76457,
+      "DepTime":"08:00",
+      "ArrTime":"14:30",
+      "TravelTime":"6hrs30min",
+      "Price":"10000",
+      "NoOfSeat":30,
+      "From":"Banglore",
+      "To":"Delhi",
+      "Way":"one"
+     
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
+  
 }
