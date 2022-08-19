@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstName": "Rolex",
+      "lastName": "S",
+      "email": "rolexsirda@gmail.com",
+      "mobile": "989898988",
+      "salary": "20000000"
+    },
+    {
+      "id": 3,
+      "firstName": "Kakashi",
+      "lastName": "Will",
+      "email": "hacker67574@gmail.com",
+      "mobile": "989894367",
+      "salary": "600000"
+    },
+    {
+      "id": 4,
+      "firstName": "Pushpa",
+      "lastName": "Raj",
+      "email": "pushparaj63527@gmailcom",
+      "mobile": "8975756784",
+      "salary": "60000"
+    },
+    {
+      "id": 5,
+      "firstName": "Surendhar",
+      "lastName": "S",
+      "email": "ssurendhar65@gmail.com",
+      "mobile": "7358845631",
+      "salary": "40000"
+    },
+    {
+      "id": 6,
+      "firstName": "Vignesh",
+      "lastName": "G",
+      "email": "svignes656r65@gmail.com",
+      "mobile": "7358845631",
+      "salary": "30000"
+    },
+    {
+      "id": 7,
+      "firstName": "Surya",
+      "lastName": "Kumar",
+      "email": "suryakumar4625@gmail.com",
+      "mobile": "854738737",
+      "salary": "50000"
+    },
+    {
+      "id": 8,
+      "firstName": "Surya",
+      "lastName": "K",
+      "email": "Suryakua532@gmailcom",
+      "mobile": "976767453",
+      "salary": "80000"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
