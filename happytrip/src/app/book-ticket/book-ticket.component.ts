@@ -28,6 +28,7 @@ export class BookTicketComponent implements OnInit {
       email:new FormControl('',[Validators.required,Validators.email]),
     })
 
+    
 
   
    
