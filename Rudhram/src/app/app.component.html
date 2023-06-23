@@ -1,198 +1,214 @@
-<section style="margin-left: 10px; margin-right: 10px;">
-  <div class="example-label">Stroked</div>
-  <div class="example-button-row">
-    <button mat-stroked-button>Basic</button>
-    <button mat-stroked-button>Primary</button>
-    <button mat-stroked-button>Accent</button>
-    <button mat-stroked-button>Warn</button>
-    <button mat-stroked-button>Disabled</button>
-  </div>
-  
-</section>
+<!-- <div style="background-color: #eeeeee;height: 100%;"> -->
 
-<mat-card class="background-card" style="margin-left: 10px; margin-right: 10px;" >
-  <!-- Content goes here -->
-  <div class="text-container">
-    <span class="text">Material Gatepass</span>
+<div class="header" style="position: relative;place-items: center;background-color: #eeeeee;">
+  <div style="display:flex;align-items: center;gap: 10px;justify-content: space-between;">
+    <img style="width: 38px;height: 42px; border-radius: 20px;"
+      src="https://cdn-s-www.estrepublicain.fr/images/175F2A6F-C5D1-48DC-A9EA-BDDB80695256/NW_raw/un-crop-circle-comprenez-un-cercle-de-culture-etait-apparu-cet-ete-dans-un-champ-du-nord-meusien-suscitant-de-tres-nombreuses-et-vives-reactions-photo-er-dr-1631641377.jpg"
+      alt="">
+    <h3 style="padding-top: 10px;">Sournabhumi</h3>
   </div>
-</mat-card>
-
-<div style="margin-left: 10px; margin-right: 10px;">
-  <div fxLayout="row" fxLayoutGap="20px">
-    <div fxFlex="50%" fxFlex.sm="50%" fxFlex.xs="100%">
-      <mat-form-field appearance="outline">
-        <mat-label>Type of Material</mat-label>
-        <mat-select>
-          <mat-option value="option1">Option 1</mat-option>
-          <mat-option value="option2">Option 2</mat-option>
-          <mat-option value="option3">Option 3</mat-option>
-        </mat-select>
-      </mat-form-field>
+  <div
+    style="display: flex;justify-content: space-between;position: absolute; right: 30px;align-items: center;gap: 10px;">
+    <div>ponsanjithkumar</div>
+    <div class="">
+      <img style="width: 32px;height: 32px;"
+        src="https://pixlok.com/wp-content/uploads/2021/10/User-Profile-Icon-9mces.png" alt="">
     </div>
   </div>
-
-  <h2>Material Inward</h2>
-  <div fxLayout="row" fxLayoutGap="20px">
-    <div fxFlex="50%" fxFlex.sm="50%" fxFlex.xs="100%">
-
-      <mat-form-field appearance="outline">
-        <mat-label>Place of Visit</mat-label>
-        <mat-select>
-          <mat-option value="option1">Option 1</mat-option>
-          <mat-option value="option2">Option 2</mat-option>
-          <mat-option value="option3">Option 3</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-
-  </div>
-  <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px" fxLayout.xs="column">
-    <div fxFlex="25%" fxFlex.md="50%">
-      <mat-form-field class="input-field" appearance="outline">
-        <input matInput placeholder="Input 1">
-      </mat-form-field>
-    </div>
-    <div fxFlex="25%">
-    <mat-form-field class="input-field" appearance="outline">
-      <mat-label>Date *</mat-label>
-      <input matInput placeholder="Choose a date" readonly>
-      <mat-icon matSuffix class="calendar-icon">calendar_today</mat-icon>
-
-    </mat-form-field>
-  </div>
-
-    <div fxFlex="25%">
-    <mat-form-field class="input-field" appearance="outline">
-      <mat-icon matSuffix class="time-icon">access_time</mat-icon>
-      <input matInput placeholder="Input 3">
-    </mat-form-field>
-  </div>
-
-    <div>
-      <button mat-stroked-button class="flexible-button">Capture</button>
-
-    </div>
-  </div>
-  <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutAlign="start center" fxLayoutAlign.xs="stretch">
-    <mat-form-field class="input-field" appearance="outline" fxFlex="100%" fxFlex.xs="auto">
-      <input matInput placeholder="Input 1">
-    </mat-form-field>
-    <mat-form-field class="input-field" appearance="outline" fxFlex="100%" fxFlex.xs="auto">
-      <mat-label>Date *</mat-label>
-      <input matInput placeholder="Choose a date" readonly>
-      <mat-icon matSuffix class="calendar-icon">calendar_today</mat-icon>
-    </mat-form-field>
-    <mat-form-field class="input-field" appearance="outline" fxFlex="100%" fxFlex.xs="auto">
-      <mat-icon matSuffix class="time-icon">access_time</mat-icon>
-      <input matInput placeholder="Input 3">
-    </mat-form-field>
-    <button mat-stroked-button class="flexible-button" fxFlex="100%" fxFlex.xs="auto">Capture</button>
-  </div>
-  <div class="container">
-    <mat-form-field class="input-field" appearance="outline">
-      <input matInput placeholder="Input 1">
-    </mat-form-field>
-    <mat-form-field class="input-field" appearance="outline">
-      <mat-label>Date *</mat-label>
-      <input matInput placeholder="Choose a date" readonly>
-      <mat-icon matSuffix class="calendar-icon">calendar_today</mat-icon>
-
-    </mat-form-field>
-    <mat-form-field class="input-field" appearance="outline">
-      <mat-icon matSuffix class="time-icon">access_time</mat-icon>
-      <input matInput placeholder="Input 3">
-    </mat-form-field>
-    <button mat-stroked-button class="flexible-button">Capture</button>
-  </div>
-
-  <div>
-    <h2>Vechile Details</h2>
-  </div>
-  <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
-
-    <mat-form-field appearance="outline">
-      <mat-label>Vechile name</mat-label>
-      <input matInput placeholder="Input 1">
-
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Vechile Type</mat-label>
-      <mat-select>
-        <mat-option value="option1">Option 1</mat-option>
-        <mat-option value="option2">Option 2</mat-option>
-        <mat-option value="option3">Option 3</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-
-  </div>
-  <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
-
-    <mat-form-field appearance="outline">
-      <mat-label>Vechile Number *</mat-label>
-      <input matInput placeholder="Input 1">
-
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Vechile Color</mat-label>
-      <input matInput placeholder="Input 1">
-
-    </mat-form-field>
-
-
-  </div>
-  <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
-    <div fxFlex="">
-      <div fxLayout="row" fxLayoutGap="10px">
-        <mat-form-field appearance="outline">
-          <mat-label>Vechile Picture</mat-label>
-          <input matInput placeholder="Input 1">
-
-        </mat-form-field> 
-        <div>
-          <button mat-stroked-button class="flexible-button">Choose File</button>
-
-        </div>
-
-      </div>
-      <div fxLayout="row" fxLayoutGap="10px">
-        <mat-form-field appearance="outline">
-          <mat-label>Vechile Document</mat-label>
-          <input matInput placeholder="Input 1">
-
-        </mat-form-field> 
-        <div>
-          <button mat-stroked-button class="flexible-button">Choose File</button>
-
-        </div>
-
-      </div>
-    </div>
-    <div fxFlex="">
-      <div fxLayout="row" fxLayoutGap="20px">
-        <div>
-          <mat-card class="centered-icon-card">
-            <mat-card-content class="centered-icon-container" fxLayout="row" fxLayoutAlign="center center">
-              <mat-icon class="centered-icon material-icons-outlined">camera_alt</mat-icon>
-            </mat-card-content>
-          </mat-card>
-          <div class="bottom-text">Vechile Picture</div>
-
-        </div>
-
-        <div>
-          <mat-card class="centered-icon-card">
-            <mat-card-content class="centered-icon-container">
-              <mat-icon class="centered-icon material-icons-outlined">description</mat-icon>
-            </mat-card-content>
-          </mat-card>
-          <div class="bottom-text">Vechile Document</div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
 </div>
+<mat-sidenav-container class="example-container" *ngIf="shouldRun" style="background-color: #eeeeee;min-height: 100%;">
+  <mat-sidenav mode="side" opened class="side-navbar">
+    <mat-nav-list>
+      <ng-container *ngFor="let menu of menuList ">
+        <mat-expansion-panel style="background-color: inherit;" [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header>
+            <div style="display: flex; gap: 12px;align-items: center;padding-left: -10px;">
+              <mat-icon mat-list-icon>{{menu.icon}}</mat-icon>
+              <div> {{menu.text}}</div>
+            </div>
+
+          </mat-expansion-panel-header>
+          <mat-nav-list class="custom-menu">
+            <mat-list-item class="custom-menu-item" [routerLink]="submenu.routerLink"
+              *ngFor="let submenu of menu.children" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:
+                  true}">
+              {{submenu.text}}
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </ng-container>
+
+    </mat-nav-list>
+    <div class="extra-text">
+      collapse sidebar
+    </div>
+
+  </mat-sidenav>
+  <mat-sidenav-content style="overflow-y: auto;background-color: inherit;overflow: hidden;">
+
+
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="example-button-row"
+      style="margin-left: 10px; margin-right: 10px;">
+      <mat-button-toggle>Visitor Pass</mat-button-toggle>
+      <mat-button-toggle>Vechile Pass</mat-button-toggle>
+      <mat-button-toggle>Material Pass</mat-button-toggle>
+      <mat-button-toggle>Equipment Pass</mat-button-toggle>
+      <mat-button-toggle>Gate Pass</mat-button-toggle>
+
+    </mat-button-toggle-group>
+
+
+    <div class="background-image" style="margin-left: 10px; margin-right: 10px;margin-top: 10px;">
+      <div class="text-container">
+        <span class="text">Material Gatepass</span>
+      </div>
+    </div>
+
+    <div style="margin-left: 10px; margin-right: 10px;margin-top: 10px;">
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div fxFlex="50%" fxFlex.sm="50%" fxFlex.xs="100%">
+          <mat-form-field appearance="outline">
+            <mat-label>Type of Material</mat-label>
+            <mat-select>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <h2>Material Inward</h2>
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div fxFlex="50%" fxFlex.sm="50%" fxFlex.xs="100%">
+
+          <mat-form-field appearance="outline" class="custom-form-field">
+            <mat-label>Place of Visit</mat-label>
+            <mat-select>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="container">
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>Vechile Color</mat-label>
+          <input matInput placeholder="Input 1">
+        </mat-form-field>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>Date *</mat-label>
+          <input matInput placeholder="Choose a date" readonly>
+          <mat-icon matSuffix class="calendar-icon">calendar_today</mat-icon>
+
+        </mat-form-field>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>Time</mat-label>
+          <mat-icon matSuffix class="time-icon">access_time</mat-icon>
+          <input matInput placeholder="Input 1">
+        </mat-form-field>
+        <div>
+          <button mat-stroked-button class="flexible-button">Capture</button>
+        </div>
+      </div>
+
+      <div>
+        <h2>Vechile Details</h2>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Vechile name</mat-label>
+          <input matInput placeholder="Input 1">
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Vechile Type</mat-label>
+          <mat-select>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+      </div>
+      <div style="margin-top: -20px;" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Vechile Number *</mat-label>
+          <input matInput placeholder="Input 1">
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Vechile Color</mat-label>
+          <input matInput placeholder="Input 1">
+
+        </mat-form-field>
+
+
+      </div>
+      <div style="margin-top: -10px;" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+        <div fxFlex="">
+          <div fxLayout="row" fxLayoutGap="10px">
+            <mat-form-field appearance="outline">
+              <mat-label>Vechile Picture</mat-label>
+              <input matInput placeholder="Input 1">
+
+            </mat-form-field>
+            <div>
+              <button mat-stroked-button (click)="imageInput.click()">Choose File</button>
+            <input mat-stroked-button type="file" style="visibility: hidden;" name="" id="" #imageInput (change)="seletImaeg($event)">
+            </div>
+          </div>
+          <div style="margin-top: -20px;" fxLayout="row" fxLayoutGap="10px">
+            <mat-form-field appearance="outline">
+              <mat-label>Vechile Document</mat-label>
+              <input matInput placeholder="Input 1">
+
+            </mat-form-field>
+            <div>
+              <button mat-stroked-button>Choose File</button>
+
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="">
+          <div fxLayout="row" fxLayoutGap="20px">
+            <div>
+              <mat-card class="centered-icon-card">
+                <mat-card-content class="centered-icon-container" fxLayout="row" fxLayoutAlign="center center">
+                  <mat-icon class="centered-icon material-icons-outlined">camera_alt</mat-icon>
+                  <img [src]="filePreview" alt="Preview" width="100%" height="100%">
+                  
+                </mat-card-content>
+              </mat-card>
+              <div class="bottom-text">Vechile Picture</div>
+
+            </div>
+
+            <div>
+              <mat-card class="centered-icon-card">
+                <mat-card-content class="centered-icon-container">
+                  <mat-icon class="centered-icon material-icons-outlined">description</mat-icon>
+                </mat-card-content>
+              </mat-card>
+              <div class="bottom-text">Vechile Document</div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+<!-- </div> -->

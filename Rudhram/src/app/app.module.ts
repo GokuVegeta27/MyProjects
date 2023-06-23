@@ -15,10 +15,17 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list'
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +42,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatNativeDateModule,
     MatIconModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonToggleModule,
+    MatSidenavModule,
+    MatListModule,
+    MatMenuModule,
+    MatExpansionModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,21 +1,75 @@
-
-
-::ng-deep .mat-stroked-button {
-    background-color: rgb(159, 62, 250);
+::ng-deep .mat-button-toggle {
+    background-color: #7900b8;
     color: #fff;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 18px;
+    font-size: 12px;
+}
 
+::ng-deep .mat-button-toggle-group{
+    border: none !important;
+}
+::ng-deep .mat-stroked-button {
+    background-color: #7900b8;
+    color: #fff;
+    height: 30px;
+    margin-top: 10px !important;
+    
+}
+
+::ng-deep .mat-expansion-panel>.mat-expansion-panel-header {
+    color: #fff;
+    font-size: 14px;
+}
+
+::ng-deep .mat-list-item {
+    height: 28px !important;
+    width: auto;
+    color: #fff !important;
+    font-size: 13px !important;
+}
+
+.custom-menu {
+    margin-top: -16px !important;
+    padding-left: 12px !important;
+    width: auto;
+}
+
+.example-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+
+}
+
+.extra-text {
+    color: #888;
+    font-size: 14px;
+    bottom: 0;
+    position: absolute;
+  }
+.background-image {
+
+    height: 200px;
+    background-image: url('./../assets/images/material.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .background-card {
     /* Set the card height to fill the viewport */
-    
     background-image: url('./../assets/images/material.jpg');
 
-    height: 40%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     /* Adjusts the image size to cover the card */
     background-position: center;
+
     /* Center the image within the card */
 }
 
@@ -35,13 +89,14 @@
 
 ::ng-deep .mat-form-field {
     width: 100%;
-
+   
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    flex-grow: 0.6;
+    align-items: start;
     justify-content: space-between;
 }
 
@@ -70,27 +125,49 @@
 
 }
 
+/* ::ng-deep .mat-expansion-indicator::after {
+    color: white;
+    transform: rotate(130deg) !important ;
+    
+} */
+.mat-expansion-panel {
+    .mat-expansion-indicator {
+        transition: transform .3s ease;
+     
+
+        &::after {
+            color: #fff !important;
+            transform: rotate(-230deg);
+        }
+    }
+
+    &.mat-expanded {
+        .mat-expansion-indicator {
+            color: #fff !important;
+
+            transform: rotate(-90deg) !important;
+        }
+    }
+}
+
 .flexible-button {
-    flex-grow: 0.06;
-    width: fit-content;
-    margin-right: 10px;
+    padding-inline: 30px !important;
+    /* margin-right: 10px; */
 }
 
-mat-grid-list {
-    background-color: yellow;
-}
-
-mat-grid-tile {
-    background-color: red;
-}
 
 .file-preview-card {
     width: 140px;
-    background-color: rgb(209, 212, 212);
+    background-color: #e3e3e3;
 
     /* Adjust the width as per your requirement */
     /* Add margins to create space around the card */
     height: 150px;
+}
+
+::ng-deep .mat-expansion-indicator {
+    color: red !important;
+    /* Replace 'red' with your desired color */
 }
 
 .centered-icon-card {
@@ -100,22 +177,47 @@ mat-grid-tile {
     /* Adjust the width as per your requirement */
     /* Add margins to create space around the card */
     height: 90px;
-  }
-  .centered-icon-container {
+}
+
+.centered-icon-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
-  .centered-icon {
+}
+
+.centered-icon {
     align-items: center;
     margin-top: 50%;
-    font-size: 26px; /* Adjust the font size of the icon */
-    color: gray; /* Adjust the color of the icon */
-  }
-  .bottom-text {
-    margin-top: 6px; /* Adjust the margin as per your requirement */
-    font-size: 12px; /* Adjust the font-size as per your requirement */
-    color: gray; /* Adjust the color of the bottom text */
+    font-size: 26px;
+    /* Adjust the font size of the icon */
+    color: gray;
+    /* Adjust the color of the icon */
+}
+
+.bottom-text {
+    margin-top: 6px;
+    /* Adjust the margin as per your requirement */
+    font-size: 12px;
+    /* Adjust the font-size as per your requirement */
+    color: gray;
+    /* Adjust the color of the bottom text */
     width: auto;
-  }
+}
+
+.side-navbar {
+    background: linear-gradient(45deg, rgba(0, 77, 94, 255) 6%, rgba(0, 86, 91, 255) 40%, rgba(29, 33, 93, 255) 82%, rgba(47, 13, 94, 255));
+    border-top-right-radius: 20px;
+    width: 250px;
+    font-size: 12px;
+}
+
+::ng-deep .mat-nav-list {
+    background: inherit;
+}
+
+.header {
+    background-color: inherit;
+    display: flex;
+    width: 100%;
+}
