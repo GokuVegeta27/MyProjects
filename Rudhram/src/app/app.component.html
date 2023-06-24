@@ -16,8 +16,11 @@
     </div>
   </div>
 </div>
+
 <mat-sidenav-container class="example-container" *ngIf="shouldRun" style="background-color: #eeeeee;min-height: 100%;">
-  <mat-sidenav mode="side" opened class="side-navbar">
+ 
+  <mat-sidenav #snav mode="over" opened  class="side-navbar">
+   
     <mat-nav-list>
       <ng-container *ngFor="let menu of menuList ">
         <mat-expansion-panel style="background-color: inherit;" [class.mat-elevation-z0]="true">

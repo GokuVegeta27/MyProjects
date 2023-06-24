@@ -13,6 +13,9 @@
     border: none !important;
 }
 
+.custom-menu-item{
+    padding-left: 30px !important;
+}
 ::ng-deep .mat-stroked-button {
     background-color: #7900b8;
     color: #fff;

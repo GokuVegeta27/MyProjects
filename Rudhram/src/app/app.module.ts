@@ -22,6 +22,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DatePipe } from '@angular/common';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,8 @@ import { DatePipe } from '@angular/common';
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatToolbarModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
