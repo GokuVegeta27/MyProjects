@@ -39,9 +39,17 @@
       </ng-container>
 
     </mat-nav-list>
-    <div class="extra-text">
-      collapse sidebar
+ <div  class="extra-text">
+  <mat-divider></mat-divider>
+    <div style="display: flex;align-items: center ;padding-left: 10px;margin-top: 10px;">
+      <mat-icon style="transform: rotate(180deg);
+   ">double_arrow_back</mat-icon>
+   <div style="padding-left: 40px;">
+    collapse sidebar
+
+   </div>
     </div>
+  </div>
 
   </mat-sidenav>
   <mat-sidenav-content style="overflow-y: auto;background-color: inherit;overflow: hidden;">
@@ -64,7 +72,7 @@
       </div>
     </div>
 
-    <div style="margin-left: 10px; margin-right: 10px;margin-top: 10px;">
+    <div style="margin: 10px">
       <div fxLayout="row" fxLayoutGap="20px">
         <div fxFlex="50%" fxFlex.sm="50%" fxFlex.xs="100%">
           <mat-form-field appearance="outline">
@@ -161,7 +169,7 @@
             </mat-form-field>
             <div>
               <button mat-stroked-button (click)="imageInput.click()">Choose File</button>
-            <input mat-stroked-button type="file" style="visibility: hidden;" name="" id="" #imageInput (change)="seletImaeg($event)">
+              <input type="file" style="display:none;" name="" id="" #imageInput (change)="seletImage($event)">
             </div>
           </div>
           <div style="margin-top: -20px;" fxLayout="row" fxLayoutGap="10px">
@@ -171,8 +179,8 @@
 
             </mat-form-field>
             <div>
-              <button mat-stroked-button>Choose File</button>
-
+              <button mat-stroked-button (click)="docmentInput.click()">Choose File</button>
+              <input type="file" style="display:none;" name="" id="" #docmentInput (change)="seletDocImage($event)">
             </div>
 
           </div>
@@ -180,23 +188,31 @@
         <div fxFlex="">
           <div fxLayout="row" fxLayoutGap="20px">
             <div>
-              <mat-card class="centered-icon-card">
-                <mat-card-content class="centered-icon-container" fxLayout="row" fxLayoutAlign="center center">
-                  <mat-icon class="centered-icon material-icons-outlined">camera_alt</mat-icon>
-                  <img [src]="filePreview" alt="Preview" width="100%" height="100%">
-                  
-                </mat-card-content>
-              </mat-card>
+              <div class="centered-icon-card">
+                <div class="centered-icon-container">
+                  <mat-icon *ngIf="!picturePreview" class="centered-icon  material-icons-outlined">camera_alt</mat-icon>
+                  <div *ngIf="picturePreview" style="width: 100%; height:100%">
+                    <img width="100%" height="100%" [src]="picturePreview" alt="Preview">
+
+                  </div>
+                </div>
+
+              </div>
               <div class="bottom-text">Vechile Picture</div>
 
             </div>
 
             <div>
-              <mat-card class="centered-icon-card">
-                <mat-card-content class="centered-icon-container">
-                  <mat-icon class="centered-icon material-icons-outlined">description</mat-icon>
-                </mat-card-content>
-              </mat-card>
+              <div class="centered-icon-card">
+                <div class="centered-icon-container">
+                  <mat-icon *ngIf="!filePreview" class="centered-icon material-icons-outlined">description</mat-icon>
+                  <div *ngIf="filePreview" style="width: 100%; height:100%">
+
+                    <img width="100%" height="100%" [src]="filePreview" alt="Preview">
+
+                  </div>
+                </div>
+              </div>
               <div class="bottom-text">Vechile Document</div>
 
             </div>
@@ -205,9 +221,55 @@
         </div>
 
       </div>
+<div>
+  <h2>Driver Details</h2>
+  </div>
+  <div>
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+<div fxFlex="94%">
+  <mat-form-field appearance="outline">
+    <mat-label>Driver name</mat-label>
+    <input matInput placeholder="Input 1">
 
+  </mat-form-field>
+
+</div>
+  </div>
+  <div style="margin-top: -10px;" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+    <div fxFlex="62%">
+      <mat-form-field appearance="outline">
+        <mat-label>Driver name</mat-label>
+        <input matInput placeholder="Input 1">
+    
+      </mat-form-field>
+    
     </div>
+    <div fxFlex="30%">
+      <div fxLayout="row" fxLayoutGap="10px">
+        <mat-form-field appearance="outline">
+          <mat-label>Driver name</mat-label>
+          <input matInput placeholder="Input 1">
+      
+        </mat-form-field>
+        <div>
+          <button mat-stroked-button (click)="fileInput.click()">Choose File</button>
+          <input type="file" style="display:none;" name="" id="" #fileInput (change)="seletImage($event)">
+        </div>
+      </div>
+    
+    </div>
+  </div>
 
+  <div>
+    <button mat-stroked-button >Submit</button>
+  </div>
+</div>
+    </div>
+   
+    <video #videoElement hidden></video>
+    <img *ngIf="capturedImage" hidden [src]="capturedImage" alt="Captured Image">
+  
+    <button (click)="captureImage()" hidden>Capture Image</button>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
