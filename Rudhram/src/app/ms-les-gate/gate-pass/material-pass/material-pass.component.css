@@ -1,0 +1,144 @@
+
+/* button toggle and toggle group  */
+::ng-deep .mat-button-toggle {
+    background-color: #7900b8;
+    color: #fff;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 18px;
+    font-size: 12px;
+}
+
+::ng-deep .mat-button-toggle-group {
+    border: none !important;
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+
+::ng-deep .mat-stroked-button {
+    background-color: #7900b8;
+    color: #fff;
+    height: 30px;
+    margin-top: 10px !important;
+
+}
+
+
+
+
+
+/* vechile image as background */
+
+.background-image {
+
+    height: 200px;
+    background-image: url('../../../../assets/images/material.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+ /* text inside the image */
+.text-container {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust the distance from the bottom as needed */
+    left: 10px;
+    /* Adjust the distance from the left as needed */
+}
+
+.text {
+    font-size: 24px;
+    color: white;
+    /* Additional text styling goes here */
+}
+
+
+/* mat inputs custom style */
+
+::ng-deep .mat-form-field {
+    width: 100%;
+
+}
+.input-field {
+    flex: 1;
+    margin-right: 10px;
+    max-width: 200px;
+    /* Adjust the width as needed */
+}
+
+.input-container {
+    position: relative;
+}
+
+.calendar-icon,.time-icon {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 0.6;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+
+
+.flexible-button {
+    padding-inline: 30px !important;
+    
+}
+
+
+
+.centered-icon-card {
+    width: 80px;
+    background-color: rgb(209, 212, 212);
+    border-radius: 5px;
+    /* Adjust the width as per your requirement */
+    /* Add margins to create space around the card */
+    height: 90px;
+}
+
+.centered-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.centered-icon {
+    align-items: center;
+    font-size: 26px;
+    /* Adjust the font size of the icon */
+    color: gray;
+    /* Adjust the color of the icon */
+}
+
+
+/* image preview card bottom text */
+
+.bottom-text {
+    margin-top: 6px;
+    /* Adjust the margin as per your requirement */
+    font-size: 12px;
+    /* Adjust the font-size as per your requirement */
+    color: gray;
+    /* Adjust the color of the bottom text */
+    width: auto;
+}
+
+

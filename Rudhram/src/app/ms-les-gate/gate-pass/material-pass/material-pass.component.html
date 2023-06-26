@@ -1,0 +1,231 @@
+
+<!-- button group  -->
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style" 
+>
+<mat-button-toggle>Visitor Pass</mat-button-toggle>
+<mat-button-toggle>Vechile Pass</mat-button-toggle>
+<mat-button-toggle>Material Pass</mat-button-toggle>
+<mat-button-toggle>Equipment Pass</mat-button-toggle>
+<mat-button-toggle>Gate Pass</mat-button-toggle>
+
+</mat-button-toggle-group>
+
+<!-- image background  -->
+<div class="background-image" style="margin-left: 10px; margin-right: 10px;margin-top: 10px;">
+<div class="text-container">
+  <span class="text">Material Gatepass</span>
+</div>
+</div>
+
+<div style="margin: 10px">
+  <!-- form start -->
+<form action="" [formGroup]="form">
+  <div fxLayout="row" fxLayoutGap="20px">
+    <div fxFlex="50%" fxFlex.sm="50%" fxFlex.xs="100%">
+      <mat-form-field appearance="outline">
+        <mat-label>Type of Material</mat-label>
+        <mat-select formControlName="materialType">
+          <mat-option value="Inwards-returnable">Inwards returnable</mat-option>
+          <mat-option value="Inwards-non-returnable">Inwards non-returnable</mat-option>
+          <mat-option value="Outwards-returnable">Outwards returnable</mat-option>
+          <mat-option value="Outwards-non-returnable">Outwards non-returnable</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+ <!-- material inward details start  -->
+  <h2>Material Inward</h2>
+
+  <div fxLayout="row" fxLayoutGap="20px">
+    <div fxFlex="50%" fxFlex.sm="50%" fxFlex.xs="100%">
+
+      <mat-form-field appearance="outline" class="custom-form-field">
+        <mat-label>Place of Visit</mat-label>
+        <mat-select formControlName="visitPlace">
+          <mat-option value="Residential">Residential</mat-option>
+          <mat-option value="SEZ">SEZ</mat-option>
+          <mat-option value="Educational Institution">Educational Institution</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <mat-form-field class="input-field" appearance="outline">
+      <mat-label>Visitor Gatepass Id</mat-label>
+      <input matInput formControlName="passId">
+    </mat-form-field>
+    <mat-form-field class="input-field" appearance="outline">
+      <mat-label>Date *</mat-label>
+      <input matInput readonly formControlName="visitDate">
+      <mat-icon matSuffix class="calendar-icon">calendar_today</mat-icon>
+
+    </mat-form-field>
+    <mat-form-field class="input-field" appearance="outline">
+      <mat-label>Time</mat-label>
+      <mat-icon matSuffix class="time-icon">access_time</mat-icon>
+      <input matInput readonly formControlName="visitTime">
+    </mat-form-field>
+    <div>
+      <button mat-stroked-button class="flexible-button" >Capture</button>
+    </div>
+  </div>
+ <!-- material inward details end  -->
+
+  <!-- vechile details start -->
+  <div>
+    <h2>Vechile Details</h2>
+  </div>
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Vechile Name</mat-label>
+      <input matInput formControlName="vechileName">
+
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Vechile Type</mat-label>
+      <mat-select formControlName="vechileType">
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+  </div>
+  <div style="margin-top: -20px;" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Vechile Number *</mat-label>
+      <input matInput formControlName="vechileNumber">
+
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Vechile Color</mat-label>
+      <input matInput formControlName="vechileColor">
+
+    </mat-form-field>
+
+
+  </div>
+  <div style="margin-top: -10px;" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+    <div fxFlex="">
+      <div fxLayout="row" fxLayoutGap="10px">
+        <mat-form-field appearance="outline">
+          <mat-label>Vechile Picture</mat-label>
+          <input matInput readonly formControlName="vechileImage">
+
+        </mat-form-field>
+        <div>
+          <button mat-stroked-button (click)="imageInput.click()">Choose File</button>
+          <input type="file" style="display:none;" name="" id="" accept="image/png, image/gif, image/jpeg" #imageInput (change)="selectImage($event)">
+        </div>
+      </div>
+      <div style="margin-top: -20px;" fxLayout="row" fxLayoutGap="10px">
+        <mat-form-field appearance="outline">
+          <mat-label>Vechile Document</mat-label>
+          <input matInput readonly formControlName="vechileDocument">
+
+        </mat-form-field>
+        <div>
+          <button mat-stroked-button (click)="docmentInput.click()">Choose File</button>
+          <input type="file" style="display:none;" name="" id="" accept="image/*" #docmentInput (change)="selectDocImage($event)">
+        </div>
+
+      </div>
+    </div>
+    <div fxFlex="">
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div>
+          <div class="centered-icon-card">
+            <div class="centered-icon-container">
+              <mat-icon *ngIf="!picturePreview"
+                class="centered-icon  material-icons-outlined">camera_alt</mat-icon>
+              <div *ngIf="picturePreview" style="width: 100%; height:100%">
+                <img width="100%" height="100%" [src]="picturePreview" alt="Preview">
+
+              </div>
+            </div>
+
+          </div>
+          <div class="bottom-text">Vechile Picture</div>
+
+        </div>
+
+        <div>
+          <div class="centered-icon-card">
+            <div class="centered-icon-container">
+              <mat-icon *ngIf="!filePreview" class="centered-icon material-icons-outlined">description</mat-icon>
+              <div *ngIf="filePreview" style="width: 100%; height:100%">
+
+                <img width="100%" height="100%" [src]="filePreview" alt="Preview">
+
+              </div>
+            </div>
+          </div>
+          <div class="bottom-text">Vechile Document</div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- vechile details end -->
+  <!-- driver details start -->
+
+  <div>
+    <h2>Driver Details</h2>
+  </div>
+  <div>
+    <div fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+      <div fxFlex="94%">
+        <mat-form-field appearance="outline">
+          <mat-label>Driver name *</mat-label>
+          <input matInput formControlName="driverName">
+
+        </mat-form-field>
+
+      </div>
+    </div>
+    <div style="margin-top: -10px;" fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="2px" fxLayout.xs="column">
+      <div fxFlex="62%">
+        <mat-form-field appearance="outline">
+          <mat-label>Driver Contact *</mat-label>
+          <input matInput formControlName="driverContact">
+
+        </mat-form-field>
+
+      </div>
+      <div fxFlex="30%">
+        <div fxLayout="row" fxLayoutGap="10px">
+          <mat-form-field appearance="outline">
+            <mat-label>Valid Id Proof *</mat-label>
+            <input matInput readonly formControlName="driverId">
+
+          </mat-form-field>
+          <div>
+            <button mat-stroked-button (click)="fileInput.click()">Choose File</button>
+            <input type="file" style="display:none;" name="" id="" accept=".pdf, .txt" #fileInput (change)="seletIdProof($event)">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <!-- driver details end -->
+
+</form>
+  <!-- form end -->
+
+  <!-- submit button  -->
+<div>
+  <button mat-stroked-button (click)="submitForm()">Submit</button>
+</div>
+</div>

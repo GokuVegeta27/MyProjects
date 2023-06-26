@@ -1,0 +1,116 @@
+<!-- header with profile image -->
+<div class="header">
+  <div style="display:flex;align-items: center;gap: 10px;justify-content: space-between;padding-left: 5px;">
+    <button *ngIf="mobileQuery.matches||!sidebar" mat-icon-button (click)="sidebarOpen()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img style="width: 38px;height: 42px; border-radius: 20px;"
+      src="https://cdn-s-www.estrepublicain.fr/images/175F2A6F-C5D1-48DC-A9EA-BDDB80695256/NW_raw/un-crop-circle-comprenez-un-cercle-de-culture-etait-apparu-cet-ete-dans-un-champ-du-nord-meusien-suscitant-de-tres-nombreuses-et-vives-reactions-photo-er-dr-1631641377.jpg"
+      alt="">
+    <h3 style="padding-top: 10px;">Swarnabhumi</h3>
+  </div>
+  <div
+    style="display: flex;justify-content: space-between;position: absolute; right: 30px;align-items: center;gap: 10px;">
+    <span fxShow fxHide.xs>ponsanjithkumar</span>
+    <div class="" [matMenuTriggerFor]="userMenu">
+      <img style="width: 32px;height: 32px;"
+        src="https://pixlok.com/wp-content/uploads/2021/10/User-Profile-Icon-9mces.png" alt="">
+    </div>
+    <mat-menu #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
+
+      <a mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Account</span>
+      </a>
+
+      <a mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Log out</span>
+      </a>
+
+    </mat-menu>
+  </div>
+</div>
+
+
+<mat-sidenav-container class="sidenav-container">
+  <!-- sidbar  -->
+  <mat-sidenav [opened]="mobileQuery.matches?!mobileQuery.matches||sidebar:!mobileQuery.matches&&sidebar"
+    [mode]="mobileQuery.matches ? 'over' : 'side'" class="side-navbar" [fixedInViewport]="true" fixedTopGap="54">
+
+    <mat-nav-list>
+      <!-- ms & les gate menu -->
+      <mat-expansion-panel class="custom-expansion-panel" [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <div style="display: flex; gap: 12px;align-items: center;padding-left: -10px;">
+            <mat-icon mat-list-icon>shield</mat-icon>
+            <div>MS & LES Gate </div>
+          </div>
+
+        </mat-expansion-panel-header>
+        <mat-nav-list class="custom-menu">
+          <mat-list-item class="custom-menu-item" routerLink="dashbaord" routerLinkActive="active-list-item">
+            Dashboard
+          </mat-list-item>
+          <mat-list-item class="custom-menu-item" routerLink="" routerLinkActive="active-list-item">
+            GatePass
+          </mat-list-item> <mat-list-item class="custom-menu-item" routerLink="reports"
+            routerLinkActive="active-list-item">
+            Reports
+          </mat-list-item> <mat-list-item class="custom-menu-item" routerLink="signup"
+            routerLinkActive="active-list-item">
+            Admin Signup
+          </mat-list-item> <mat-list-item class="custom-menu-item" routerLink="history"
+            routerLinkActive="active-list-item">
+            History
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- settings menu -->
+      <mat-expansion-panel class="custom-expansion-panel" [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <div style="display: flex; gap: 12px;align-items: center;padding-left: -10px;">
+            <mat-icon mat-list-icon>settings</mat-icon>
+            <div> Settings</div>
+          </div>
+
+        </mat-expansion-panel-header>
+        <mat-nav-list class="custom-menu">
+          <mat-list-item class="custom-menu-item" routerLink="support" routerLinkActive="active-list-item">
+            Support
+          </mat-list-item>
+          <mat-list-item class="custom-menu-item" routerLink="account-settings" routerLinkActive="active-list-item">
+            Account Settings
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+    </mat-nav-list>
+
+
+    <!-- collapse button -->
+    <div class="extra-text">
+      <mat-divider></mat-divider>
+      <div (click)="sidebar=false" style="display: flex;align-items: center ;padding-left: 10px;margin-top: 10px;">
+        <mat-icon style="transform: rotate(180deg);
+     ">double_arrow_back</mat-icon>
+        <div style="padding-left: 40px;">
+          collapse sidebar
+
+        </div>
+      </div>
+    </div>
+
+  </mat-sidenav>
+
+  <!-- main-content  -->
+  <mat-sidenav-content style="overflow-y: auto;background-color: inherit;overflow: hidden;margin-top: 54px;">
+
+
+    <router-outlet></router-outlet>
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
